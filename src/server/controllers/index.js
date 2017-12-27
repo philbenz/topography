@@ -15,7 +15,7 @@ function getMonths() {
 }
 
 function getPortfolio() {
-
+  /*JSON Example*/
   /*
   Program: Electronic Delivery
   Project: Print Replacement
