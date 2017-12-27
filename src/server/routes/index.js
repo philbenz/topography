@@ -23,7 +23,6 @@ router.get('/', function (req, res, next) {
     if (error) return next(error);
     if (results) {
       renderObject.months = results.months;
-      //renderObject.phrase = results;
       res.render('index', renderObject);
     }
   });
