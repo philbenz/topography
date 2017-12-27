@@ -9,7 +9,7 @@ function sum(num1, num2, callback) {
 }
 
 function getMonths() {
-  const months = ["Jan", "Feb", "Mar", "Apr"];
+  let months = ["Jan", "Feb", "Mar", "Apr"];
 
   return months;
 }
@@ -17,7 +17,7 @@ function getMonths() {
 function getJSON(string1, string2, callback) {
   const releaseView = {};
 
-  releaseView.months = getMonths;
+  releaseView.months = getMonths();
   callback(null, releaseView);
 }
 
