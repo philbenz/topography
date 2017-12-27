@@ -8,6 +8,13 @@ function sum(num1, num2, callback) {
   }
 }
 
+function getJSON(string1, string2, callback) {
+  const rephrase = string1 + " " + string2;
+
+  callback(null, rephrase);
+}
+
 module.exports = {
-  sum
+  sum,
+  getJSON
 };
