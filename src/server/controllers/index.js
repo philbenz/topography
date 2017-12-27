@@ -15,7 +15,7 @@ function getMonths() {
 }
 
 function getJSON(string1, string2, callback) {
-  const releaseView = new {};
+  const releaseView = {};
 
   releaseView.months = ["Jan", "Feb", "Mar", "Apr"];
   callback(null, releaseView);
