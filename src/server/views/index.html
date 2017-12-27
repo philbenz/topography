@@ -8,6 +8,10 @@
     <div>{{title}}</div>
     <hr>
     <div>Just sayin' {{phrase}}</div>
+
+    {% for month in months %}
+      <div>{{ month }}</div>
+    {% endfor %}
   </div>
 
 {% endblock %}

@@ -17,10 +17,12 @@ const indexController = require('../controllers/index');
 
 router.get('/', function (req, res, next) {
   const renderObject = {};
+  const months = {"Jan", "Feb", "Mar", "Apr"};
   renderObject.title = 'checking the JSON';
   indexController.getJSON("hey", "guys!", (error, results) => {
     if (error) return next(error);
     if (results) {
+      renderObject.months = months;
       renderObject.phrase = results;
       res.render('index', renderObject);
     }
