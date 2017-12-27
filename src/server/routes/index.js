@@ -17,12 +17,12 @@ const indexController = require('../controllers/index');
 
 router.get('/', function (req, res, next) {
   const renderObject = {};
-  const months = ["Jan", "Feb", "Mar", "Apr"];
+  // const months = ["Jan", "Feb", "Mar", "Apr"];
   renderObject.title = '2018 Release Topography';
   indexController.getJSON("2018", "Release",(error, results) => {
     if (error) return next(error);
     if (results) {
-      renderObject.months = months;
+      renderObject.months = results.months;
       //renderObject.phrase = results;
       res.render('index', renderObject);
     }

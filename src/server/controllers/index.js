@@ -8,10 +8,17 @@ function sum(num1, num2, callback) {
   }
 }
 
-function getJSON(string1, string2, callback) {
-  var rephrase = string1 + " " + string2;
+function getMonths() {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr'];
 
-  callback(null, rephrase);
+  return months;
+}
+
+function getJSON(string1, string2, callback) {
+  const releaseView = new {};
+
+  releaseView.months = getMonths();
+  callback(null, releaseView);
 }
 
 module.exports = {
