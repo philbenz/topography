@@ -36,7 +36,7 @@ function getPortfolio() {
     "project2":"Bechtel buy/sell fee report"}
   };
 
-  portfolioView = new Array[];
+  portfolioView = new Array();
   portfolioView.push(obj1);
   portfolioView.push(obj2);
 
