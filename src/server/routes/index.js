@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
     if (error) return next(error);
     if (results) {
       renderObject.months = results.months;
-      renderObject.portfolio = results.efforts;
+      renderObject.programs = results.efforts;
       res.render('index', renderObject);
     }
   });
