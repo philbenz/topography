@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
   indexController.getJSON("hey", "guys!", (error, results) => {
     if (error) return next(error);
     if (results) {
-      renderObject.getJSON = results;
+      renderObject.phrase = results;
       res.render('index', renderObject);
     }
   });
