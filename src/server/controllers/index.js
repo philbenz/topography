@@ -33,8 +33,8 @@ function getPortfolio() {
 
   obj2 = {"program":"Client Commitments", "projects": {
     "project1":"Apple 30 Day Restriction",
-    "project2":"Bechtel buy/sell fee report"
-  }
+    "project2":"Bechtel buy/sell fee report"}
+  };
 
   portfolioView = new Array[];
   portfolioView.push(obj1);
