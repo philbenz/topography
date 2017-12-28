@@ -9,7 +9,7 @@ function sum(num1, num2, callback) {
 }
 
 function getMonths() {
-  let months = ["Jan", "Feb", "Mar", "Apr"];
+  let months = ['Jan', 'Feb', 'Mar', 'Apr'];
 
   return months;
 }
@@ -25,27 +25,33 @@ function getPortfolio() {
   Project: Apple 30 Day Restriction
   Project: Bechtel buy/sell fee report
   */
-  obj1 = {"program":"Electronic Delivery", "projects": {
-    "project1":"Print Replacement",
-    "project2":"Composition Tool",
-    "project3":"Migrate to Hyland"}
+  var obj1 = {
+    program:'Electronic Delivery',
+    projects: {
+      project1:'Print Replacement',
+      project2:'Composition Tool',
+      project3:'Migrate to Hyland'
+    }
   };
 
-  obj2 = {"program":"Client Commitments", "projects": {
-    "project1":"Apple 30 Day Restriction",
-    "project2":"Bechtel buy/sell fee report"}
-  };
+  var obj2 = {
+      program:'Client Commitment',
+      projects: {
+        project1:'Apple 30 Day Restriction',
+        project2:'Bechtel buy/sell fee report'
+      }
+    };
 
-  portfolioView = new Array();
+  var portfolioView = [];
   portfolioView.push(obj1);
   portfolioView.push(obj2);
-
+  console.log('portfolio: ', portfolioView);
   return portfolioView;
 }
 
 function getJSON(string1, string2, callback) {
   const releaseView = {};
-
+  console.log('in getJSON');
   releaseView.months = getMonths();
   releaseView.efforts = getPortfolio();
   callback(null, releaseView);

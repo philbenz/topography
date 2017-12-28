@@ -1,5 +1,5 @@
 (function () {
 
-  console.log('wade rocks!!');
+  console.log('it rocks!!');
 
 })();

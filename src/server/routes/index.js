@@ -16,13 +16,15 @@ const indexController = require('../controllers/index');
 // });
 
 router.get('/', function (req, res, next) {
+  console.log('in the get');
   const renderObject = {};
-  renderObject.title = '2018 Release Topography';
-  indexController.getJSON("2018", "Release",(error, results) => {
+  renderObject.title = '2017 Release Topography';
+  indexController.getJSON('2018', 'Release',(error, results) => {
     if (error) return next(error);
     if (results) {
       renderObject.months = results.months;
       renderObject.programs = results.efforts;
+      console.log('efforts: ', results);
       res.render('index', renderObject);
     }
   });
