@@ -14,7 +14,7 @@
     {% for program in programs %}
       <div>{{ program.program }}</div>
       {% for project in programs.projects %}
-        <div>{{ programs.projects.project}}</div>
+        <div>{{ program.projects.project}}</div>
       {% endfor %}
       <br>
     {% endfor %}
