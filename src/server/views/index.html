@@ -11,9 +11,9 @@
       <div class="floating-box">{{ month }}</div>
     {% endfor %}
     <hr>
-    {% for stuffing in programs %}
-      <div>{{ stuffing.program }}</div>
-      {% for project in program.projects %}
+    {% for program in programs %}
+      <div>{{ program.program }}</div>
+      {% for project in programs.projects %}
         <div>{{ project.project}}</div>
       {% endfor %}
       <br>
