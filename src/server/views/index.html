@@ -13,8 +13,8 @@
     <hr>
     {% for program in programs %}
       <div>{{ program.program }}</div>
-      {% for project in program.projects %}
-        <div>{{ program.projects.project}}</div>
+      {% for project in programs.projects %}
+        <div>{{ programs.projects.project}}</div>
       {% endfor %}
       <br>
     {% endfor %}
